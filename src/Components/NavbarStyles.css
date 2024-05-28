@@ -1,0 +1,52 @@
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #F5EDED;
+    color: #3E3636;
+    font-family: 'Helvetica';
+}
+.navbuttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navbuttons li{
+    list-style: none;
+    padding: 0px 12px;
+}
+
+.navbuttons li a{
+    text-decoration: none;
+    font-weight: 1.1rem;
+    color: #3E3636;;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.mainLogo{
+    height: 45px;
+    width: auto;
+}
+
+.title{
+    font-size: 24px;
+    padding: 8px;
+    padding: 0px;
+    margin: 0px 4px;
+}
+
+#register-button{
+    background-color: #3E3636;
+    border: none;
+    color: #F5EDED;
+    padding:12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    border-radius: 22px;
+}
