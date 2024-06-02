@@ -2,14 +2,16 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #F5EDED;
-    color: #3E3636;
+    color: black;
+    padding-left: 110px;
+    padding-right: 110px;
     font-family: 'Helvetica';
 }
 .navbuttons{
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
 .navbuttons li{
     list-style: none;
@@ -19,10 +21,11 @@ nav{
 .navbuttons li a{
     text-decoration: none;
     font-weight: 1.1rem;
-    color: #3E3636;;
+    color: black;
 }
 
 .logo{
+    padding-left: 10px;
     display: flex;
     align-items: center;
 }
@@ -38,11 +41,16 @@ nav{
     padding: 0px;
     margin: 0px 4px;
 }
+.title a{
+    text-decoration: none;
+    color: black;
+}
+
 
 #register-button{
-    background-color: #3E3636;
+    background-color: black;
     border: none;
-    color: #F5EDED;
+    color: white;
     padding:12px;
     text-align: center;
     text-decoration: none;
