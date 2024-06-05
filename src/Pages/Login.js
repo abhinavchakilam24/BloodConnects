@@ -11,7 +11,7 @@ function Login(){
     const [password, setPassword] = React.useState();
     return(
         <>
-            <Navbar></Navbar>
+            <Navbar/>
             <div className="wrapper">
                 <div className="image-container">
                     <img src={loginImage} height={600} width={600} alt="a doctor smiling"/>

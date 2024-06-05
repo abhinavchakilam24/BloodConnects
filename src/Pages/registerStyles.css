@@ -1,0 +1,57 @@
+.register-firstline, .register-secondline, .register-thirdline{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 24px;
+    padding-left: 18px;
+}
+.firtsname, .lastname, .phonenumber, .email, .bloodgroup, .dob{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+.lastname, .email, .dob{
+    margin-left: 40px;
+}
+.firstname, .phonennumber {
+    margin-left: 20px;
+}
+.register-container{
+    margin-top: 27px;
+    margin-left: 240px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 25px;
+    width: 960px;
+    height: 620px;
+}
+.register-firstline{
+    margin-top: 40px;
+    padding: top 0px;
+}
+
+.register-fourthline{
+    width: 840px;
+    padding-left: 20px;
+}
+.register-heading{
+    font-size: 12px;
+    margin-bottom: 3px;
+    margin-left: 4px;
+}
+.form-logo{
+    float: right;
+    padding: 18px 18px 0 0;
+}
+.register-form{
+    width: 900px;
+    height: 560px;
+    padding-top: 20px;
+    padding-left: 30px;
+}
+.bottom-section{
+    padding: 20px;
+    padding-left: 30px;
+}
+.submit-button{
+    padding-top: 16px;
+    padding-left: 4px;
+}

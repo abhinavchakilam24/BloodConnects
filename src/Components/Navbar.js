@@ -1,8 +1,14 @@
 import "./NavbarStyles.css"
 import mainLogo from '../Assets/logo.png'
+import { useNavigate } from "react-router-dom";
 
 
 function Navbar(){
+    const navigate = useNavigate();
+    const gotToNewPage=()=>{
+        navigate("/register");
+      };
+
     return(
         <>
         <nav>
@@ -14,7 +20,7 @@ function Navbar(){
                 <li><a href="index.html">About</a></li>
                 <li><a href="index.html">Search Donors</a></li>
                 <li><a href="/login">Login</a></li>
-                <li><button id="register-button">Register</button></li>
+                <li><button  onClick={() => gotToNewPage()} id="register-button">Register</button></li>
             </ul>
         </nav>
         </>
