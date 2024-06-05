@@ -1,6 +1,6 @@
 import "./NavbarStyles.css"
 import mainLogo from '../Assets/logo.png'
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link} from "react-router-dom";
 
 
 function Navbar(){
@@ -17,10 +17,10 @@ function Navbar(){
                 <h4 className="title"><a href="/">Blood Connect</a></h4> 
             </div>
             <ul className="navbuttons">
-                <li><a href="index.html">About</a></li>
-                <li><a href="index.html">Search Donors</a></li>
-                <li><a href="/login">Login</a></li>
-                <li><button  onClick={() => gotToNewPage()} id="register-button">Register</button></li>
+                    <li><Link to="/about" className="navbuttons-links">About</Link></li>
+                    <li><Link to="/search" className="navbuttons-links">Search Donors</Link></li>
+                    <li><Link to="/login" className="navbuttons-links">Login</Link></li>
+                    <li><button  onClick={() => gotToNewPage()} id="register-button">Register</button></li>
             </ul>
         </nav>
         </>
