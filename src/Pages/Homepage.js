@@ -5,6 +5,7 @@ import { Button, SHAPE } from 'baseui/button';
 import { HeadingXXLarge, HeadingXLarge, HeadingMedium, ParagraphLarge } from 'baseui/typography';
 import { Card, StyledBody } from 'baseui/card';
 import { Grid, Cell } from 'baseui/layout-grid';
+import { useNavigate} from "react-router-dom";
 
 const HeroSection = styled('div', {
   backgroundColor: '#f8f9fa',
@@ -36,14 +37,19 @@ const StyledCard = styled(Card, {
   textAlign: 'center',
 });
 
+
 const HomePage = () => {
+  const navigate = useNavigate();
+  const gotToRegisterPage=()=>{
+  navigate("/register");
+};
   return (
     <div>
       {/* Hero Section */}
       <HeroSection>
-        <HeadingXXLarge className='main-heading'>Connecting Lives, One Drop at a time</HeadingXXLarge>
-        <ParagraphLarge>Join our community to find and give life-saving blood donations</ParagraphLarge>
-        <Button overrides={{ BaseButton: { style: { backgroundColor: 'black', color: '#fff' } } }} shape={SHAPE.pill}>
+        <HeadingXXLarge className='main-heading'>Connecting Lives, one drop at a time</HeadingXXLarge>
+        <ParagraphLarge className='following-line'>Join our community to find and give life-saving blood donations</ParagraphLarge>
+        <Button onClick={() => gotToRegisterPage()} overrides={{ BaseButton: { style: { backgroundColor: 'black', color: '#fff', size: '100px' } } }} shape={SHAPE.pill}>
           Get Started
         </Button>
       </HeroSection>
@@ -124,7 +130,7 @@ const HomePage = () => {
       <Section>
         <HeadingXLarge>Join Us</HeadingXLarge>
         <ParagraphLarge>Together, we can make a difference. Sign up today and help save lives.</ParagraphLarge>
-        <Button overrides={{ BaseButton: { style: { backgroundColor: '#1a73e8', color: '#fff' } } }} shape={SHAPE.pill}>
+        <Button overrides={{ BaseButton: { style: { backgroundColor: 'black', color: '#fff' } } }} shape={SHAPE.pill}>
           Sign Up Now
         </Button>
       </Section>
