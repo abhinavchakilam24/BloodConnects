@@ -2,7 +2,7 @@ import Navbar from "../Components/Navbar";
 import { Input } from "baseui/input";
 import { Button, SHAPE } from "baseui/button";
 import React from "react";
-import loginImage from '../Assets/doctor-login-logo.png'
+import loginImage from '../Assets/nurse-patient-login.jpeg'
 import './LoginStyles.css'
 
 
@@ -14,7 +14,7 @@ function Login(){
             <Navbar/>
             <div className="wrapper">
                 <div className="image-container">
-                    <img src={loginImage} height={600} width={600} alt="a doctor smiling"/>
+                    <img src={loginImage} height={600} width={600} alt="a doctor smiling" className="login-image"/>
                 </div>
                 <div className="login-container">
     <form>

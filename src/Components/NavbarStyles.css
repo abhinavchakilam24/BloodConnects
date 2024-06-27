@@ -11,17 +11,32 @@ nav{
     display: flex;
     align-items: center;
     justify-content: center;
-    
 }
 .navbuttons li{
     list-style: none;
     padding: 0px 12px;
 }
 
-.navbuttons-links{
+.navbuttons-links {
     text-decoration: none;
-    font-weight: 1.1rem;
     color: black;
+    font-size: large;
+    position: relative;
+}
+
+.navbuttons-links::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1.5px; /*Height of underline*/
+    bottom: -1.5px; /*Spacing between the underline*/
+    left: 0;
+    background-color: black;
+    transition: width 0.3s ease;
+}
+
+.navbuttons-links:hover::after {
+    width: 100%;
 }
 
 .logo{

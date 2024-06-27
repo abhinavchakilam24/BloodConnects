@@ -16,13 +16,16 @@ form{
     height: 600px;
     width: 600px;
     overflow: hidden;
+    position: relative;
+    object-fit: cover;
 }
+
+.login-ima
 
 .login-heading{
     font-size: 40px;
     margin-left: 115px;
 }
-
 
 .login-label{
     margin-bottom:5px;
@@ -32,7 +35,7 @@ form{
 
 .login-container{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    padding:127px 150px;
+    padding:133px 150px;
     display: flex;
     flex-direction: column;
     border-radius: 25px;

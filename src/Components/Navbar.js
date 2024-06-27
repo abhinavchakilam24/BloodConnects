@@ -1,7 +1,7 @@
 import "./NavbarStyles.css"
 import mainLogo from '../Assets/logo.png'
 import { Button, SHAPE } from "baseui/button";
-import { useNavigate, Link} from "react-router-dom";
+import { useNavigate,  NavLink} from "react-router-dom";
 
 
 function Navbar(){
@@ -18,9 +18,9 @@ function Navbar(){
                 <h4 className="title"><a href="/">Blood Connect</a></h4> 
             </div>
             <ul className="navbuttons">
-                    <li><Link to="/about" className="navbuttons-links">About</Link></li>
-                    <li><Link to="/search" className="navbuttons-links">Find Donors</Link></li>
-                    <li><Link to="/login" className="navbuttons-links">Login</Link></li>
+                    <li><NavLink to="/about" className="navbuttons-links">About</NavLink></li>
+                    <li><NavLink to="/search" className="navbuttons-links">Find Donors</NavLink></li>
+                    <li><NavLink to="/login" className="navbuttons-links">Login</NavLink></li>
                     <li><Button 
       onClick={() => gotToRegisterPage()}
       shape={SHAPE.pill}

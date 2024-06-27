@@ -45,7 +45,6 @@ const HomePage = () => {
 };
   return (
     <div>
-      {/* Hero Section */}
       <HeroSection>
         <HeadingXXLarge className='main-heading'>Connecting Lives, one drop at a time</HeadingXXLarge>
         <ParagraphLarge className='following-line'>Join our community to find and give life-saving blood donations</ParagraphLarge>
@@ -54,7 +53,6 @@ const HomePage = () => {
         </Button>
       </HeroSection>
 
-      {/* About Section */}
       <Section>
         <HeadingXLarge>About Blood Donor Connect</HeadingXLarge>
         <ParagraphLarge>
@@ -62,7 +60,6 @@ const HomePage = () => {
         </ParagraphLarge>
       </Section>
 
-      {/* Statistics Section */}
       <StatisticsSection>
         <Grid>
           <Cell span={[4, 8, 12]}>
@@ -95,7 +92,6 @@ const HomePage = () => {
         </Grid>
       </StatisticsSection>
 
-      {/* How It Works Section */}
       <Section>
         <HeadingXLarge>How It Works</HeadingXLarge>
         <Grid>
@@ -126,7 +122,6 @@ const HomePage = () => {
         </Grid>
       </Section>
 
-      {/* Call to Action Section */}
       <Section>
         <HeadingXLarge>Join Us</HeadingXLarge>
         <ParagraphLarge>Together, we can make a difference. Sign up today and help save lives.</ParagraphLarge>
