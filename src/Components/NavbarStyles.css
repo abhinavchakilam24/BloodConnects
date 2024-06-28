@@ -43,7 +43,12 @@ nav{
     padding-left: 10px;
     display: flex;
     align-items: center;
+    transition: transform 0.3s ease;
 }
+
+.logo:hover {
+    transform: scale(1.03); /* Zoom effect */
+  }
 
 .mainLogo{
     height: 45px;
@@ -59,17 +64,4 @@ nav{
 .title a{
     text-decoration: none;
     color: black;
-}
-
-
-#register-button{
-    background-color: black;
-    border: none;
-    color: white;
-    padding:12px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 15px;
-    border-radius: 22px;
 }

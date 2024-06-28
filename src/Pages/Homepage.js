@@ -2,17 +2,12 @@ import React from 'react';
 import './HomepageStyles.css';
 import { styled } from 'baseui';
 import { Button, SHAPE } from 'baseui/button';
-import { HeadingXXLarge, HeadingXLarge, HeadingMedium, ParagraphLarge } from 'baseui/typography';
+import { Heading, HeadingLevel} from 'baseui/heading';
+import { HeadingXLarge, HeadingMedium, ParagraphLarge } from 'baseui/typography';
 import { Card, StyledBody } from 'baseui/card';
 import { Grid, Cell } from 'baseui/layout-grid';
 import { useNavigate} from "react-router-dom";
 
-const HeroSection = styled('div', {
-  backgroundColor: '#f8f9fa',
-  padding: '100px 20px',
-  textAlign: 'center',
-  color: '#fff',
-});
 
 const Section = styled('div', {
   padding: '60px 20px',
@@ -37,7 +32,6 @@ const StyledCard = styled(Card, {
   textAlign: 'center',
 });
 
-
 const HomePage = () => {
   const navigate = useNavigate();
   const gotToRegisterPage=()=>{
@@ -45,18 +39,19 @@ const HomePage = () => {
 };
   return (
     <div>
-      <HeroSection>
-        <HeadingXXLarge className='main-heading'>Connecting Lives, one drop at a time</HeadingXXLarge>
-        <ParagraphLarge className='following-line'>Join our community to find and give life-saving blood donations</ParagraphLarge>
-        <Button onClick={() => gotToRegisterPage()} overrides={{ BaseButton: { style: { backgroundColor: 'black', color: '#fff', size: '100px' } } }} shape={SHAPE.pill}>
-          Get Started
-        </Button>
-      </HeroSection>
-
+        <div className='landing-page-main'>
+          <HeadingLevel>
+            <Heading className='main-heading' overrides={{ Block: { style: { fontSize: '3.5em' } } }}>Connecting Lives, one drop at a time</Heading>
+            <ParagraphLarge className='following-line' overrides={{ Block: { style: { fontSize: '1.5em', paddingBottom: '0px' } } }}>Join our community to find and give life-saving blood donations</ParagraphLarge>
+          </HeadingLevel>
+          <Button onClick={() => gotToRegisterPage()} overrides={{ BaseButton: { style: { backgroundColor: 'black', color: '#fff', size: '100px' } } }} shape={SHAPE.pill}>
+            Get Started
+          </Button>
+        </div>
       <Section>
-        <HeadingXLarge>About Blood Donor Connect</HeadingXLarge>
-        <ParagraphLarge>
-          Blood Donor Connect is a platform that bridges the gap between blood donors and patients in need. Our mission is to save lives by making it easier for people to donate and receive blood.
+        <HeadingXLarge>Why Blood Connect?</HeadingXLarge>
+        <ParagraphLarge overrides={{ Block: { style: { textAlign: 'center', padding: '50px', paddingTop: '0px'} } }}>
+          Welcome to Blood Connect, a unique platform dedicated to connecting blood donors with recipients in need. Our mission is to build a compassionate community that saves lives through seamless and efficient blood donations. By providing an easy-to-use, secure system with geo-searching and real-time updates about donors, we strive to make the process of giving and receiving blood as effortless and hassle-free as possible. Join us in our mission to give back to society and make a significant impact, one donation at a time.
         </ParagraphLarge>
       </Section>
 
