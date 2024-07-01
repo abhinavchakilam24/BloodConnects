@@ -21,3 +21,25 @@
     font-size: 1.6rem;
     padding-bottom: 22px;
 }
+.why-blood-connect{
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  padding: 30px 125px;
+}
+
+.why-bc-image{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 25px;
+  height: 450px;
+  width: 450px;
+  overflow: hidden;
+  position: relative;
+  object-fit: cover;
+}
+
+.why-bc-cards{
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
