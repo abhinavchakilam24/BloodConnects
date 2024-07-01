@@ -37,7 +37,6 @@ const StyledCard = styled(Card, {
     transform: 'translateY(-10px)',
     boxShadow: '0 8px 12px rgba(0, 0, 0, 0.15)',
   },
-  padding: '20px',
   textAlign: 'center',
 });
 
@@ -86,7 +85,7 @@ const HomePage = () => {
       <div>
       <HeadingXLarge >Tips</HeadingXLarge>
       <TipsSection>
-      <Card
+      <StyledCard
       overrides={{ Root: { style: { width: "370px", padding: '10px' } } }}
       title="Before Donating"
     >
@@ -101,9 +100,9 @@ const HomePage = () => {
           Read More
         </Button>
       </StyledAction>
-    </Card>
+    </StyledCard>
 
-    <Card
+    <StyledCard
       overrides={{ Root: { style: { width: "370px", padding: '10px' } } }}
       title="During Donation"
     >
@@ -118,8 +117,8 @@ const HomePage = () => {
           Read More
         </Button>
       </StyledAction>
-    </Card>
-    <Card
+    </StyledCard>
+    <StyledCard
       overrides={{ Root: { style: { width: "370px", padding: '10px' } } }}
       title="After Donating">
       <StyledThumbnail
@@ -133,7 +132,7 @@ const HomePage = () => {
           Read More
         </Button>
       </StyledAction>
-    </Card>
+    </StyledCard>
       </TipsSection>
       </div>
       
