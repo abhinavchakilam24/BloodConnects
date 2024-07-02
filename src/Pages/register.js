@@ -2,7 +2,7 @@ import './registerStyles.css';
 import * as React from "react";
 import { Select } from "baseui/select";
 import { Button, SHAPE } from "baseui/button";
-
+import { Heading, HeadingLevel} from 'baseui/heading';
 import { DatePicker } from "baseui/datepicker";
 import { Input } from "baseui/input";
 import {
@@ -31,9 +31,14 @@ function Register(){
         <>
             <Navbar/>
             <div className="register-container">
-                <img src={mainLogo} height={36} alt="Blood Connect Logo" className="form-logo"/>
+            <div className='registerform-heading'>
+                    <HeadingLevel>
+                        <Heading className='main-heading' overrides={{ Block: { style: { fontSize: '2em' } } }}>Register User</Heading>
+                    </HeadingLevel>
+                    <img src={mainLogo} height={36} alt="Blood Connect Logo" className="find-logo"/>
+                </div>
                 <form className='register-form'>
-                    <div className='register-firstline'>
+                    <div className='register-firstline'  style={{marginTop: '18px'}}>
                         <div className="firtsname">
                         <p className="register-heading">First Name</p>
                     <Input

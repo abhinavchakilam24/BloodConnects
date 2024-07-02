@@ -40,7 +40,7 @@ const FindDonors = () => {
                     <img src={mainLogo} height={36} alt="Blood Connect Logo" className="find-logo"/>
                 </div>
                 <form className='find-form'>
-                    <div className='find-firstline'>
+                    <div className='find-firstline' style={{marginTop: '18px'}}>
                         <div className="firtsname">
                         <p className="find-heading">Patient First Name</p>
                     <Input
@@ -48,7 +48,7 @@ const FindDonors = () => {
       onChange={e => setPatientFirstName(e.target.value)}
     />
                         </div>
-                        <div className="lastname">
+                        <div className="lastname" >
                             <p className="find-heading">Patient Last Name</p>
                             <Input
       value={patientLastName}
@@ -84,7 +84,7 @@ const FindDonors = () => {
       maxDropdownWidth="5"
     />
                         </div>
-                        <div className='bloodgroup'>
+                        <div className='find-bloodgroup'>
                         <p className="find-heading">Required Blood Group</p>
                     <Select
       backspaceRemoves={false}
@@ -164,7 +164,7 @@ const FindDonors = () => {
                         </div>
                     </div>
                     <div className="find-fifthline">
-                    <p className="find-heading">Location</p>
+                    <p className="find-heading">Hospital Name</p>
                     <Input
       value={location}
       onChange={e => setLocation(e.target.value)}

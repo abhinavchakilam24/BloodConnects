@@ -9,19 +9,19 @@
     flex-direction: column;
     width: 400px;
 }
-.lastname, .bloodgroup, .requireddate{
+.lastname, .find-bloodgroup, .requireddate{
     margin-left: 40px;
 }
 .firstname, .phonennumber {
     margin-left: 20px;
 }
 .find-container{
-    margin-top: 35px;
+    margin-top: 10px;
     margin-left: 240px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 25px;
     width: 960px;
-    height: 680px;
+    height: 700px;
 }
 .find-firstline{
     margin-top: 40px;
@@ -34,8 +34,7 @@
 }
 .find-heading{
     font-size: 12px;
-    margin-bottom: 3px;
-    margin-left: 4px;
+    margin-top: 2px;
 }
 .find-logo{
     float: right;

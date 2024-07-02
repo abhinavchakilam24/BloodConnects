@@ -9,6 +9,10 @@
     flex-direction: column;
     width: 400px;
 }
+
+.bloodgroup{
+    margin-left: 0;
+}
 .lastname, .email, .dob{
     margin-left: 40px;
 }
@@ -29,13 +33,17 @@
 }
 
 .register-fourthline{
-    width: 840px;
+    width: 845px;
     padding-left: 20px;
 }
 .register-heading{
     font-size: 12px;
     margin-bottom: 3px;
     margin-left: 4px;
+}
+.registerform-heading{
+    display: flex;
+    justify-content: space-between;
 }
 .form-logo{
     float: right;
@@ -44,7 +52,6 @@
 .register-form{
     width: 900px;
     height: 560px;
-    padding-top: 20px;
     padding-left: 30px;
 }
 .bottom-section{
