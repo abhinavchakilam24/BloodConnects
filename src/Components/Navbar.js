@@ -19,7 +19,7 @@ function Navbar(){
             </div>
             <ul className="navbuttons">
                     <li><NavLink to="/about" className="navbuttons-links">About</NavLink></li>
-                    <li><NavLink to="/search" className="navbuttons-links">Find Donors</NavLink></li>
+                    <li><NavLink to="/find" className="navbuttons-links">Find Donors</NavLink></li>
                     <li><NavLink to="/login" className="navbuttons-links">Login</NavLink></li>
                     <li><Button 
       onClick={() => gotToRegisterPage()}

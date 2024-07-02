@@ -12,6 +12,7 @@ import { Client as Styletron } from "styletron-engine-monolithic";
 import { Provider as StyletronProvider } from "styletron-react";
 import { LightTheme, BaseProvider } from "baseui";
 import Register from './Pages/register';
+import FindDonors from './Pages/FindDonors';
 
 
 const engine = new Styletron();
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
   {
     path: "register",
     element: <Register/>
+  },
+  {
+    path: "find",
+    element: <FindDonors/>
   }
 ]);
 

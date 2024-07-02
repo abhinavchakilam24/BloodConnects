@@ -1,8 +1,9 @@
-import './registerStyles.css';
+import './FindDonorsStyles.css';
 import * as React from "react";
+import { Heading, HeadingLevel} from 'baseui/heading';
 import { Select } from "baseui/select";
 import { Button, SHAPE } from "baseui/button";
-
+import mainLogo from '../Assets/logo.png';
 import { DatePicker } from "baseui/datepicker";
 import { Input } from "baseui/input";
 import {
@@ -15,43 +16,65 @@ import {
     LABEL_PLACEMENT
   } from "baseui/checkbox";
 import Navbar from '../Components/Navbar';
-import mainLogo from '../Assets/logo.png';
 
-function Register(){
-    const [firstName, setFirstName] = React.useState("");
-    const [lastName, setLastName] = React.useState("");
+const FindDonors = () => {
+    const [patientFirstName, setPatientFirstName] = React.useState("");
+    const [patientLastName, setPatientLastName] = React.useState("");
+    const [attendeeFirstName, setAttendeeFirstName] = React.useState("");
+    const [attendeeLastName, setAttendeeLastName] = React.useState("");
     const [country, setCountry] = React.useState(COUNTRIES.IN);
     const [phonenumber, setPhoneNumber] = React.useState("");
-    const [email, setEmail] = React.useState("");
     const [bloodgroup, setBloodGroup] = React.useState([]);
+    const [type, setType] = React.useState([]);
     const [date, setDate] = React.useState([new Date()]);
     const [location, setLocation] = React.useState("");
     const [checked, setChecked] = React.useState(false);
     return(
         <>
             <Navbar/>
-            <div className="register-container">
-                <img src={mainLogo} height={36} alt="Blood Connect Logo" className="form-logo"/>
-                <form className='register-form'>
-                    <div className='register-firstline'>
+            <div className="find-container">
+                <div className='findform-heading'>
+                    <HeadingLevel>
+                        <Heading className='main-heading' overrides={{ Block: { style: { fontSize: '2em' } } }}>Blood Request</Heading>
+                    </HeadingLevel>
+                    <img src={mainLogo} height={36} alt="Blood Connect Logo" className="find-logo"/>
+                </div>
+                <form className='find-form'>
+                    <div className='find-firstline'>
                         <div className="firtsname">
-                        <p className="register-heading">First Name</p>
+                        <p className="find-heading">Patient First Name</p>
                     <Input
-      value={firstName}
-      onChange={e => setFirstName(e.target.value)}
+      value={patientFirstName}
+      onChange={e => setPatientFirstName(e.target.value)}
     />
                         </div>
                         <div className="lastname">
-                            <p className="register-heading">Last Name</p>
+                            <p className="find-heading">Patient Last Name</p>
                             <Input
-      value={lastName}
-      onChange={e => setLastName(e.target.value)}
+      value={patientLastName}
+      onChange={e => setPatientLastName(e.target.value)}
     />
                         </div>
                     </div>
-                    <div className='register-secondline'>
+                    <div className='find-secondline'>
+                    <div className="firtsname">
+                        <p className="find-heading">Attendee First Name</p>
+                    <Input
+      value={attendeeFirstName}
+      onChange={e => setAttendeeFirstName(e.target.value)}
+    />
+                        </div>
+                        <div className="lastname">
+                            <p className="find-heading">Attendee Last Name</p>
+                            <Input
+      value={attendeeLastName}
+      onChange={e => setAttendeeLastName(e.target.value)}
+    />
+                        </div>
+                    </div>
+                    <div className='find-thirdline'>
                         <div className='phonenumber'>
-                            <p className="register-heading">Phone Number</p>
+                            <p className="find-heading">Attendee Phone Number</p>
                             <PhoneInput
       country={country}
       onCountryChange={({ option }) => setCountry(option)}
@@ -61,19 +84,8 @@ function Register(){
       maxDropdownWidth="5"
     />
                         </div>
-                        <div className='email'> 
-                            <p className="register-heading">Email</p>
-                            <Input
-      value={email}
-      onChange={e => setEmail(e.target.value)}
-      placeholder="name@example.com"
-      type="email"
-    />
-                        </div>
-                    </div>
-                    <div className="register-thirdline">
                         <div className='bloodgroup'>
-                        <p className="register-heading">Blood Group</p>
+                        <p className="find-heading">Required Blood Group</p>
                     <Select
       backspaceRemoves={false}
       options={[
@@ -116,23 +128,43 @@ function Register(){
       onChange={params => setBloodGroup(params.value)}
     />
                         </div>
-                        <div className='dob'>
-                            <p className="register-heading">Date of Birth</p>
+                    </div>
+                    <div className="find-fourthline">
+                        <div className='type'>
+                        <p className="find-heading">Type</p>
+                        <Select
+      options={[
+        {
+          label: "Blood",
+          id: "BLOOD"
+        },
+        {
+          label: "Platelets",
+          id: "PLATELETS"
+        }
+      ]}
+      value={type}
+      required
+      placeholder="Type"
+      onChange={params => setType(params.value)}
+    />
+                        </div>
+                        <div className='requireddate'>
+                            <p className="find-heading">Required Date</p>
                             <DatePicker
       value={date}
       onChange={({ date }) =>
         setDate(Array.isArray(date) ? date : [date])
       }
       clearable
-      maxDate={new Date("2005-01-01")}
-      minDate={new Date("1960-01-01")}
+      minDate={new Date("2024-07-01")}
       formatString="dd/MM/yyyy"
       placeholder="DD/MM/YYYY"
     />
                         </div>
                     </div>
-                    <div className="register-fourthline">
-                    <p className="register-heading">Location</p>
+                    <div className="find-fifthline">
+                    <p className="find-heading">Location</p>
                     <Input
       value={location}
       onChange={e => setLocation(e.target.value)}
@@ -145,7 +177,7 @@ function Register(){
       onChange={e => setChecked(e.target.checked)}
       labelPlacement={LABEL_PLACEMENT.right}
     >
-      Recieve blood requests via SMS
+      Recieve request update via SMS
     </Checkbox>
     <div className='submit-button'>
     <Button
@@ -155,11 +187,11 @@ function Register(){
       Submit
     </Button>
     </div>
-    
                     </div>
                 </form>
             </div>
         </>
     );
+
 }
-export default Register;
+export default FindDonors
