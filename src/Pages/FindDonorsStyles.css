@@ -4,7 +4,7 @@
     padding-bottom: 24px;
     padding-left: 18px;
 }
-.firtsname, .lastname, .phonenumber, .type, .bloodgroup, .requireddate{
+.firtsname, .lastname, .phonenumber, .type, .find-bloodgroup, .requireddate{
     display: flex;
     flex-direction: column;
     width: 400px;

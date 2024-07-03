@@ -13,6 +13,7 @@ import { Provider as StyletronProvider } from "styletron-react";
 import { LightTheme, BaseProvider } from "baseui";
 import Register from './Pages/register';
 import FindDonors from './Pages/FindDonors';
+import About from './Pages/About';
 
 
 const engine = new Styletron();
@@ -33,6 +34,11 @@ const router = createBrowserRouter([
   {
     path: "find",
     element: <FindDonors/>
+  },
+  {
+    path: "about",
+    element: <About/>,
+
   }
 ]);
 
